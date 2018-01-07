@@ -1,0 +1,15 @@
+﻿@model CheckBoxApplivcation.Models.GenderType
+@{
+    ViewBag.Title = "Index";
+}
+@using (Html.BeginForm())
+{
+    for(int i = 0; i < Model.employee.Count(); i++)
+    {
+        @Html.RadioButtonFor(X => Model.selectedRadio,Model.employee[i].EmpName)
+        // @Html.HiddenFor(X => Model.employee[i].EmpName)
+        //  @Html.DisplayFor(X => Model.employee[i].EmpName)
+        @Html.Label( Model.employee[i].EmpName)
+    }
+    <input type="submit" name="name" value="submit data" />
+}
